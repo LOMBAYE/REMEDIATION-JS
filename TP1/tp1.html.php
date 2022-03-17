@@ -8,7 +8,13 @@
     <title>TP1</title>
 </head>
 <body>
-    <div class="container"></div>
+        <div class="head">
+            <div class="unit" id="id1">Notification Success</div>
+            <div class="unit" id="id2">Notification Danger</div>
+            <div class="unit" id="id3">Notification Warning</div>
+            <div class="unit" id="id4">Notification Info</div>
+        </div>
+        <h3></h3>
     <script src="tp1.js"></script>
 </body>
 </html>

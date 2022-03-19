@@ -2,18 +2,18 @@ const units = document.querySelectorAll('.unit')
 h3 = document.querySelector('h3')
 units.forEach(elem => {
     elem.addEventListener('click', (e) => {
-        const P = listener(e)
+        const P = creator(e)
         h3.appendChild(P);
         setTimeout(() => h3.removeChild(P), 3000);
     })
 });
 
-function listener(e) {
+function creator(unit) {
     P = document.createElement('p');
     P.classList.add('general')
-    var eCSS = window.getComputedStyle(e.target, null);
-    var bgColor = eCSS.getPropertyValue('background-color');
+    var unitCSS = window.getComputedStyle(unit.target, null);
+    var bgColor = unitCSS.getPropertyValue('background-color');
     P.style.backgroundColor = bgColor
-    P.innerText = e.target.innerText
+    P.innerText = unit.target.innerText
     return P
 }

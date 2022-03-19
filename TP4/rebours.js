@@ -1,3 +1,8 @@
+d = new Date();
+document.querySelector('.today').innerText = d;
+
+
+
 const rebours = () => {
     const nouvelAn = new Date("January 1, 2023 00:00:00").getTime();
     const aujourdhui = new Date().getTime();

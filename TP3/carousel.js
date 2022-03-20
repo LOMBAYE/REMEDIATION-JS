@@ -4,7 +4,7 @@ const droi = document.getElementById('dr');
 
 
 // -------------------------Functions-----------------------
-function masquer() {
+function hide() {
     if (pos == -nbr + 1)
         g.style.visibility = "hidden";
     else
@@ -37,10 +37,10 @@ document.body.onload = function() {
     for (i = 1; i <= nbr; i++) {
         div = document.createElement('div');
         div.className = 'tof';
-        div.style.backgroundImage = "url('../img/im" + i + ".jpg')"
+        div.style.backgroundImage = "url('im" + i + ".jpg')"
         container.appendChild(div);
     }
-    masquer();
+    hide();
 
 
 }
@@ -49,7 +49,7 @@ g.onclick = function() {
         pos--;
     container.style.transform = "translate(" + pos * 800 + "px)";
     container.style.transition = "all 0.5s ease";
-    masquer();
+    hide();
 
 
 
@@ -59,7 +59,7 @@ droi.onclick = function() {
         pos++;
     container.style.transform = "translate(" + pos * 800 + "px)";
     container.style.transition = "all 0.5s ease";
-    masquer();
+    hide();
 
 
 }

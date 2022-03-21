@@ -1,37 +1,29 @@
 const container = document.getElementById('container');
-const g = document.getElementById('g');
-const droi = document.getElementById('dr');
+const right = document.getElementById('right');
+const left = document.getElementById('left');
 
 
-// -------------------------Functions-----------------------
 function hide() {
     if (pos == -nbr + 1)
-        g.style.visibility = "hidden";
+        right.style.visibility = "hidden";
     else
-        g.style.visibility = "visible";
+        right.style.visibility = "visible";
 
 
     if (pos == 0)
-        droi.style.visibility = 'hidden';
+        left.style.visibility = 'hidden';
 
     else
-        droi.style.visibility = 'visible';
+        left.style.visibility = 'visible';
 
 
 
 }
 
 
-
-
-
-
-
-
-
-// ------------------------------EVENTS----------------
+// Listeners
 document.body.onload = function() {
-    nbr = 3
+    nbr = 9
     pos = 0
     container.style.width = (800 * nbr) + "px";
     for (i = 1; i <= nbr; i++) {
@@ -44,7 +36,7 @@ document.body.onload = function() {
 
 
 }
-g.onclick = function() {
+right.onclick = function() {
     if (pos > -nbr + 1)
         pos--;
     container.style.transform = "translate(" + pos * 800 + "px)";
@@ -54,7 +46,7 @@ g.onclick = function() {
 
 
 }
-droi.onclick = function() {
+left.onclick = function() {
     if (pos < 0)
         pos++;
     container.style.transform = "translate(" + pos * 800 + "px)";

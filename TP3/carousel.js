@@ -8,18 +8,11 @@ function hide() {
         right.style.visibility = "hidden";
     else
         right.style.visibility = "visible";
-
-
     if (pos == 0)
         left.style.visibility = 'hidden';
-
     else
         left.style.visibility = 'visible';
-
-
-
 }
-
 
 // Listeners
 document.body.onload = function() {
@@ -31,27 +24,21 @@ document.body.onload = function() {
         div.className = 'tof';
         div.style.backgroundImage = "url('im" + i + ".jpg')"
         container.appendChild(div);
+        // div.addEventListener('mouseover', function() { alert('okiii') })
     }
     hide();
-
-
 }
 right.onclick = function() {
     if (pos > -nbr + 1)
         pos--;
     container.style.transform = "translate(" + pos * 800 + "px)";
-    container.style.transition = "all 0.5s ease";
+    container.style.transition = "all 1s ease";
     hide();
-
-
-
 }
 left.onclick = function() {
     if (pos < 0)
         pos++;
     container.style.transform = "translate(" + pos * 800 + "px)";
-    container.style.transition = "all 0.5s ease";
+    container.style.transition = "all 1s ease";
     hide();
-
-
 }

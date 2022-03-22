@@ -37,10 +37,9 @@ body {
     background-size: cover;
 }
 
-
-/* .tof:hover {
-    transform: scale(1.5);
-} */
+.tof:hover {
+    transform: scale(2);
+}
 
 .bouton {
     background-color: #93b662;

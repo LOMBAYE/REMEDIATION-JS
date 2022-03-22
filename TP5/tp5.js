@@ -35,9 +35,21 @@ function showMovies(data) {
     data.forEach(movie => {
         const { title, poster_path, vote_average, overview } = movie;
         const movieEl = document.createElement('div');
+        const imEl = document.createElement('img');
+        const infoEl = document.createElement('div');
+        const h3El = document.createElement('h3');
+        const spanEl = document.createElement('span')
+        const overviewEl = document.createElement('div')
+
         movieEl.classList.add('film')
+            // imEl.classList.add('img', src = "${IMGPATH +poster_path}")
+            // infoEl.classList.add('info')
+            // h3El.classList.add('title')
+            // spanEl.classList.add('${getColor(vote_average)}')
+            // overviewEl.classList.add('overview')
+
         movieEl.innerHTML = `
-        <img src="${IMGPATH +poster_path}" alt="${title}" class="img" id="img">
+            <img src="${IMGPATH +poster_path}" alt="${title}" class="img" id="img">
             <div class="info">
                 <h3 class="title">${title}</h3>
                 <span class="${getColor(vote_average)}">${vote_average}</span>
@@ -48,7 +60,11 @@ function showMovies(data) {
             </div>
         `
         container.appendChild(movieEl);
-
+        // film.appendChild(imEl);
+        // film.appendChild(infoEl);
+        // info.appendChild(h3El);
+        // info.appendChild(spanEl);
+        // film.appendChild(overviewEl);
     })
 }
 
@@ -64,7 +80,7 @@ function getColor(rate) {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const recherche = input.value;
-    console.log(recherche);
+    // console.log(recherche);
     if (recherche) {
         downloadMovie(SEARCHAPI + recherche)
     }

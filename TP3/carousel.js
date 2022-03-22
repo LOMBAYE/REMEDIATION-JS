@@ -1,5 +1,5 @@
-const container = document.getElementById('container');
 const right = document.getElementById('right');
+const container = document.getElementById('container');
 const left = document.getElementById('left');
 
 

@@ -11,7 +11,9 @@ let menus = [{
     {
         name: "Widgets",
         icon: "fa-solid fa-grid",
-        submenu: []
+        submenu: [],
+        badge:'',
+        badgeColor:'red',
     },
     {
         name: "Layout Options",
@@ -47,7 +49,7 @@ let menus = [{
     },
     {
         name: "Tables",
-        icon: "",
+        icon: "fa-solid fa-table",
         submenu: [
             'sous menu 1',
             'sous menu 2',

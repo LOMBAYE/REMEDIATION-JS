@@ -1,6 +1,8 @@
 d = new Date();
 document.querySelector('.today').innerText = d;
-
+h = d.getHours();
+m = d.getMinutes();
+s = d.getSeconds();
 
 
 const rebours = () => {

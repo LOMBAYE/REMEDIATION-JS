@@ -43,7 +43,7 @@ function showMovies(data) {
                 <span class="${getColor(vote_average)}">${vote_average}</span>
             </div>
             <div class="overview">
-                <h3>Overview</h3>
+                <h3>Overview:</h3>
                     ${overview}
             </div>
         `
@@ -52,10 +52,10 @@ function showMovies(data) {
     })
 }
 
-function getColor(vote) {
-    if (vote >= 8) {
+function getColor(rate) {
+    if (rate >= 8) {
         return 'green'
-    } else if (vote >= 5) {
+    } else if (rate >= 5) {
         return 'orange'
     } else {
         return 'red'

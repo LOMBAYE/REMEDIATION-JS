@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #fff;
+    --secondary-color: #373b69;
+    --favoritemeal-color: #f0e2fd;
+    --border-color: #8a8a89;
+}
+
+body {
+    margin: 0;
+    background-color: var(--primary-color);
+}
+
+.header {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-color);
+}
+
+.search {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: white;
+}

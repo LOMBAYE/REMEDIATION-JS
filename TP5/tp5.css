@@ -9,7 +9,7 @@
 
 body {
     margin: 0;
-    background-color: var(--primary-color)
+    background-color: var(--primary-color);
 }
 
 .header {
@@ -35,6 +35,17 @@ body {
     background-color: var(--secondary-color);
     position: relative;
     overflow: hidden;
+}
+
+@keyframes img {
+    from {
+        width: 2%;
+        transform: rotate(45deg);
+    }
+    to {
+        width: 300px;
+        transform: rotate(360deg);
+    }
 }
 
 .film img {

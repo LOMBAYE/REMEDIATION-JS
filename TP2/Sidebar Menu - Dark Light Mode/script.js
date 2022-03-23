@@ -12,8 +12,8 @@ let menus = [{
         name: "Widgets",
         icon: "fa-solid fa-grid",
         submenu: [],
-        badge:'',
-        badgeColor:'red',
+        badge: '',
+        badgeColor: 'red',
     },
     {
         name: "Layout Options",
@@ -59,22 +59,13 @@ let menus = [{
 
 
 
-
-
-
-
-
-
-
-
-
 const body = document.querySelector('body'),
     sidebar = body.querySelector('nav'),
     toggle = body.querySelector(".toggle"),
     searchBtn = body.querySelector(".search-box"),
     modeSwitch = body.querySelector(".toggle-switch"),
     modeText = body.querySelector(".mode-text");
-
+menu = document.querySelector('.menu')
 
 toggle.addEventListener("click", () => {
     sidebar.classList.toggle("close");
@@ -94,3 +85,17 @@ modeSwitch.addEventListener("click", () => {
 
     }
 });
+
+function createMenu(icon, text, badge, badgeColor, icon) {
+    const menu_test = document.createElement('div')
+    menu_test.classList.add('menu')
+    menu_test.innerHTML = `
+    <a href="#">
+    <i class='bx bx-bar-chart-alt-2 icon'></i>
+    <span class="text nav-text">Layout Options</span>
+    <span class="badge" style="background-color:green;">6</span>
+    <i class="fa-solid fa-angle-left" id="left"></i>
+    </a>
+    `
+    menu.appendChild(menu_test);
+}

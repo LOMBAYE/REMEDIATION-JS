@@ -43,7 +43,7 @@ body {
 
 .bouton {
     background-color: #93b662;
-    border-radius: 0 10px 0 10px;
+    border-radius: 0 10px 10px;
     position: absolute;
     width: 70px;
     cursor: pointer;

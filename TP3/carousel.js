@@ -3,7 +3,7 @@ const container = document.getElementById('container');
 const left = document.getElementById('left');
 
 
-function hide() {
+function hideButton() {
     if (pos == -nbr + 1)
         right.style.visibility = "hidden";
     else
@@ -26,14 +26,14 @@ document.body.onload = function() {
         container.appendChild(div);
         // div.addEventListener('mouseover', function() { alert('okiii') })
     }
-    hide();
+    hideButton();
 }
 right.onclick = function() {
     if (pos > -nbr + 1)
         pos--;
     container.style.transform = "translate(" + pos * 800 + "px)";
     container.style.transition = "all 1s ease";
-    hide();
+    hideButton();
 }
 left.onclick = function() {
     if (pos < 0)

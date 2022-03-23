@@ -10,9 +10,9 @@
 
 :root {
     /* ===== Colors ===== */
-    --body-color: #E4E9F7;
-    --sidebar-color: #FFF;
-    --primary-color: #695CFE;
+    --body-color: white;
+    --sidebar-color: #353a3f;
+    --primary-color: white;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
@@ -34,16 +34,19 @@ body {
     /* color: #fff; */
 }
 
-body.dark {
+
+/* body.dark {
     --body-color: #18191a;
     --sidebar-color: #242526;
     --primary-color: #3a3b3c;
     --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
     /* --text-color: #ccc; */
-}
 
 
+/* } */
+
+*
 /* ===== Sidebar ===== */
 
 .sidebar {
@@ -91,7 +94,7 @@ body.dark {
 
 .sidebar .text,
 .sidebar .icon {
-    color: var(--text-color);
+    color: white;
     transition: var(--tran-03);
 }
 
@@ -111,6 +114,10 @@ body.dark {
 
 .sidebar header {
     position: relative;
+}
+
+header {
+    border-bottom: 1px solid grey;
 }
 
 .sidebar header .image-text {
@@ -210,7 +217,7 @@ body.dark .sidebar header .toggle {
 }
 
 .sidebar li a:hover {
-    background-color: var(--primary-color);
+    background-color: blue;
 }
 
 .sidebar li a:hover .icon,
@@ -293,7 +300,7 @@ body.dark .mode .sun-moon i.moon {
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
-    background-color: var(--sidebar-color);
+    /* background-color: var(--sidebar-color); */
     transition: var(--tran-04);
 }
 

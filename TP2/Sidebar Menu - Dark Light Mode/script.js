@@ -1,59 +1,54 @@
 let menus = [{
-        name: "Dashboard",
         icon: "fa-solid fa-gauge-high",
-        submenu: [
-            'sous menu 1',
-            'sous menu 2',
-            'sous menu 3',
-            'sous menu 4',
-        ]
+        text: "Dashboard",
+        badge: "",
+        badgeColor: "",
+        arrow: " fa-solid fa-angle-left",
+        submenu: [{
+            icon: "",
+            text: "",
+            badge: "",
+            badgeColor: "",
+            submenu: []
+        }]
     },
     {
-        name: "Widgets",
         icon: "fa-solid fa-grid",
-        submenu: [],
-        badge: '',
+        text: "Widgets",
+        badge: "New",
         badgeColor: 'red',
+        arrow: "",
+        submenu: []
     },
     {
-        name: "Layout Options",
         icon: "fa-solid fa-copy",
-        submenu: [
-            'sous menu 1',
-            'sous menu 2',
-        ]
+        text: "Layout Options",
+        badge: "6",
+        badgeColor: "green",
+        arrow: " fa-solid fa-angle-left",
+        submenu: []
     },
     {
-        name: "Charts",
-        icon: "fa-solid fa-chart-pie",
-        submenu: [
-            'sous menu 1',
-            'sous menu 2',
-        ]
-    },
-    {
-        name: "UI Elements",
         icon: "fa-solid fa-tree",
-        submenu: [
-            'sous menu 1',
-            'sous menu 2',
-        ]
+        text: "UI Elements",
+        badge: "",
+        badgeColor: "",
+        arrow: "fa-solid fa-angle-left",
+        submenu: []
     },
     {
-        name: "Forms",
         icon: "fa-solid fa-pen-to-square",
-        submenu: [
-            'sous menu 1',
-            'sous menu 2',
-        ]
+        text: "Forms",
+        badge: "",
+        badgeColor: "",
+        submenu: []
     },
     {
-        name: "Tables",
         icon: "fa-solid fa-table",
-        submenu: [
-            'sous menu 1',
-            'sous menu 2',
-        ]
+        text: "Tables",
+        badge: "",
+        badgeColor: "",
+        submenu: []
     }
 ]
 
@@ -62,40 +57,42 @@ let menus = [{
 const body = document.querySelector('body'),
     sidebar = body.querySelector('nav'),
     toggle = body.querySelector(".toggle"),
-    searchBtn = body.querySelector(".search-box"),
-    modeSwitch = body.querySelector(".toggle-switch"),
-    modeText = body.querySelector(".mode-text");
-menu = document.querySelector('.menu')
+    menu_links = document.querySelector('.menu-links'),
+    menu = document.querySelector('.menu')
+
 
 toggle.addEventListener("click", () => {
     sidebar.classList.toggle("close");
 })
 
-searchBtn.addEventListener("click", () => {
-    sidebar.classList.remove("close");
-})
+function createMenu(icon, text, badge, badgeColor, arrow) {
+    // <ul class="menu-links">
+    //     <li class="nav-link">
+    //         <a href="#">
+    //             <i class="fa-solid fa-copy"></i>
+    //             <span class="text nav-text">Layout Options</span>
+    //             <span class="badge" style="background-color:green;">6</span>
+    //             <i class="fa-solid fa-angle-left" id="left"></i>
+    //         </a>
+    //     </li>
+    // </ul>
 
-modeSwitch.addEventListener("click", () => {
-    body.classList.toggle("dark");
+    // creating elements
 
-    if (body.classList.contains("dark")) {
-        modeText.innerText = "Light mode";
-    } else {
-        modeText.innerText = "Dark mode";
+    const liste = document.createElement('li'),
+        ancre = document.createElement('a'),
+        left_icon = document.createElement('i'),
+        span1 = document.createElement('span'),
+        span2 = document.createElement('span'),
+        angle_icon = document.createElement('i')
 
-    }
-});
+    // setting attributes
 
-function createMenu(icon, text, badge, badgeColor, icon) {
-    const menu_test = document.createElement('div')
-    menu_test.classList.add('menu')
-    menu_test.innerHTML = `
-    <a href="#">
-    <i class='bx bx-bar-chart-alt-2 icon'></i>
-    <span class="text nav-text">Layout Options</span>
-    <span class="badge" style="background-color:green;">6</span>
-    <i class="fa-solid fa-angle-left" id="left"></i>
-    </a>
-    `
-    menu.appendChild(menu_test);
+}
+
+function addTextNode(text) {
+    var newtext = document.createTextNode(text),
+        p1 = document.getElementById("p1");
+
+    p1.appendChild(newtext);
 }

@@ -3,10 +3,16 @@ const form = document.querySelector('form'),
     meal_name = document.querySelector('.meal_name'),
     display_recipe = document.querySelector('.display_recipe'),
     search_input = document.querySelector('.search_input'),
-    img2 = document.querySelector('#img2')
+    img2 = document.querySelector('#img2'),
+    img_recette = document.querySelector('.img_recette'),
+    recette = document.querySelector('.recette'),
+    pop_up = document.querySelector('.pop-up'),
+    exit = document.querySelector('.exit'),
+    pop_up_title = document.querySelector('h2'),
+    ingredients = document.querySelector('ul')
 
 
-// img2.addEventListener('click', alert('okii'))
+// ingredients.addEventListener('click', () => alert('okii'))
 
 
 const random_search = "https://www.themealdb.com/api/json/v1/1/random.php",
@@ -33,11 +39,17 @@ generate_recipe.addEventListener('click', () => {
                 let image = meal.strMealThumb
                 img2.src = image
                 meal_name.innerHTML = meal.strMeal
+                img_recette.src = image
+                pop_up_title.innerHTML = meal.strMeal
+                recette.innerHTML = meal.strInstructions
+                console.log(meal.strIngredient1)
             })
         })
 })
 
 display_recipe.addEventListener('click', (e) => {
     e.preventDefault
-    alert('recette')
+    pop_up.style.display = 'block'
+    exit.addEventListener('click', () => pop_up.style.display = 'none')
+        // alert('recette')
 })

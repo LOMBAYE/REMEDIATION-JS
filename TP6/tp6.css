@@ -38,6 +38,7 @@ body {
     box-shadow: var(--ombre-element);
     background-color: var(--primary-color);
     border-radius: var(--border-radius);
+    position: relative;
 }
 
 .header {
@@ -46,6 +47,10 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--secondary-color);
+}
+
+input {
+    cursor: pointer;
 }
 
 .form {
@@ -156,4 +161,52 @@ span i .fa {
 
 .meal_name {
     font-size: 1.5rem;
+}
+
+.pop-up {
+    border: 2px solid grey;
+    padding: 1rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: none;
+    overflow: auto;
+}
+
+.head {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.display_recipe {
+    cursor: pointer;
+}
+
+.display_recipe:hover {
+    background-color: var(--primary-color);
+}
+
+.exit {
+    position: absolute;
+    right: 0;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.exit:hover {
+    background-color: grey;
+}
+
+.img_recette {
+    width: 100%;
+    height: 40%;
+}
+
+.recette {
+    font-size: 1.2rem;
 }

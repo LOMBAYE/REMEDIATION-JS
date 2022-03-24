@@ -1,35 +1,43 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="tp6.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <title>TP6</title>
+    <link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="tp6.css">
+    <title>Food recipe</title>
 </head>
 
 <body>
     <div class="container">
-        <header>
-            <input type="text" class="seach">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </header>
-        <div class="recettes_favorites">
-            <h2>Mes Recettes favorites</h2>
-            <img src="" alt="" favorite>
-            <span>Pancakes</span>
-        </div>
-        <div class="random">
-            <img src="" alt="" class="img_recette">
-            <div class="recette">
-                <div class="meal_name">Fresh sardines</div>
-                <i class="fa-thin fa-heart"></i>
+        <div class="main">
+            <div class="header" id="header">
+                <form action="" class="form" id="form">
+                    <input type="text">
+                    <span><i class="fa fa-search fa-2x" aria-hidden="true" class="search_input"></i></span>
+                </form>
             </div>
-            <div class="food_recette">
-
+            <div class="center">
+                <h1>Mes recettes favorites</h1>
+                <div class="image">
+                    <img id="img1" src="tel.jpeg" alt="">
+                    <span>Pancakes</span>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="image-buton">
+                    <div class="imag">
+                        <button class="generate_recipe" type="button">Generer une Recette</button>
+                        <img id="img2" src="sardines.jpeg" alt="">
+                    </div>
+                    <div class="descript-heart">
+                        <span class="meal_name">Fresh Sardines</span>
+                        <span class="display_recipe"><i class="fa fa-heart" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+                <div class="meal-details-content">
+                    <h2>Fresh sardines</h2>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit blanditiis quis repellat porro commodi laborum unde? Accusantium eaque repellendus omnis similique harum, eos minus quidem. Illum, placeat assumenda. Aperiam, porro.
+                </div>
             </div>
         </div>
     </div>

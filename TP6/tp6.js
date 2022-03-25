@@ -49,7 +49,7 @@ function searchByName(nameMeal) {
         })
 }
 searchById(52977)
-searchByName(wrapped)
+    // searchByName(wrapped)
 generate_recipe.addEventListener('click', () => {
     fetch(random_search)
         .then(response => { return (response.json()) })
